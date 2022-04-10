@@ -1,0 +1,30 @@
+{%extends 'base.html'%}
+{%load crispy_forms_tags%}
+
+{%block title%}
+    {{block.supper}}Register
+{%endblock title%}
+
+{%block content%}
+
+
+{% for message in messages%}
+    {%if message%}
+        <span>{{message}}</span>
+    {%endif%}
+{%endfor%}
+
+
+
+   <form action="" method="post" class="mt-5 col-6">
+    {%csrf_token%}
+
+    
+        {{form|crispy}}
+    
+
+    <input type="submit" name="" id="" class="btn btn-primary" value="Register">
+
+
+   </form>
+{%endblock content%}
